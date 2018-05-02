@@ -1,100 +1,216 @@
 <!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Albert Acebrón's page</title>
+		<title>Albert Acebrón</title>
 		<meta charset="utf-8" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+<style>
+.avatar{
+	border-radius:100%;
+	max-width:100%;
+	max-height:100%;
+	width:50%;
+	margin-bottom: 1.5em;
+}
+#background{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+#prerender{
+	display:none;
+}
+.main{
+	text-align:center;
+}
+.icons{
+	text-align:center;
+}
+.main{
+	background-color:white;
+	opacity:0.95;
+	border-radius:4px;
+}
+header{
+	border-radius:4px 4px 0 0;
+	padding: 3em 0 0.5em 0;
+}
+.lower{
+	padding: 0 3em 3em 3em;
+	border-radius:4px;
+}
+.main-col{
+	//padding:0 0 2em 0;
+}
+.icons > div > a > i:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    font-size: 1.85rem;
+    line-height: inherit;
+    text-align: center;
+    text-indent: 0;
+}
+.icons > div > a > i{
+    color:white;
+    background-color:black;
+    text-decoration: none;
+    position: relative;
+    //display: block;
+    width: 3.75em;
+    height: 3.75em;
+    border-radius: 100%;
+    //border: solid 1px #c8cccf;
+    line-height: 3.75em;
+    overflow: hidden;
+    text-align: center;
+    //text-indent: 3.75em;
+    white-space: nowrap;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+.main{
+	width:100%;
+}
+h1{
+	font-size: 1.85em;
+}
+h2{
+	font-size: 1.5em;
+    margin: 0 0 0.525em 0;
+}
+h1, h2, p{
+    color: #414f57;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    //font-size: 14pt;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+p{
+    margin: 0 0 2em 0;
+    letter-spacing: 0.1em;
+}
+</style>
 	</head>
-	<body class="is-loading">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/me.jpg" alt="" /></span>
-							<h1>Albert Acebrón</h1>
-							<p><a href="https://linkedin.com/in/aacebron" title="Majoring in Math, CS and Telecommunications">Student<sup>3</sup></a><br>
-							<a href="http://fisioti.me">Co-founder</a><br>
-							<a href="https://github.com/corollari">Hackathon-goer</a></p>
-						</header>
-						<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
-							<div class="field">
-								<input type="text" name="name" id="name" placeholder="Name" />
-							</div>
-							<div class="field">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<div class="select-wrapper">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-							</div>
-							<div class="field">
-								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-							</div>
-							<div class="field">
-								<label>But are you a robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-							</div>
-							<ul class="actions">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
-						</form>
-						<hr />
-						-->
-						<footer>
-							<ul class="icons">
-								<li><a href="https://github.com/corollari" class="fa-github">Github</a></li>
-								<li><a href="https://linkedin.com/in/aacebron" class="fa-linkedin">Linkedin</a></li>
-								<li><a href="mailto:me@albert.sh" class="fa-envelope">me@albert.sh</a></li>
-								<li><a href="resume.pdf" title="Resumé" class="fa-file-text">Resume</a></li>
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<!--
-						<ul class="copyright">
-							<li>&copy; Jane Doe</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-						-->
-					</footer>
+	<body class="container vertical-center" onload="loaded()" onresize="loaded()">
+		<canvas id="background" width="100%" height="100%"></canvas>
+		<!--<canvas id="prerender" width="100%" height="100%"></canvas>-->
+		<div class="main">
+		<div class="row">
+		<div class="col-sm">
+		</div>
+		<div class="col-sm">
+		<section>
+			<header>
+				<img class="avatar" src="me.jpg" alt="" />
+				<h1>Albert Acebrón</h1>
+			</header>
+		</section>
+		</div>
+		<div class="col-sm">
+		</div>
+		</div>
+		<div class="lower">
+		<div class="row">
+			<div class="col-sm main-col">
+				<h2>Student<sup>3</sup></h2>
+				<p>Currently majoring in:<br>
+				Mathematics (GPA: 9.2/10)<br>
+				Computer Science (GPA: 9.3/10)<br>
+				Telecommunications (GPA: 9.52/10)<br>
+				Top 1st by grades in UAB’s Engineering Faculty the year 2016-2017<br>
+				<!--Obtained honors in about 80% of all the courses taken-->
+				</p>
 			</div>
-
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			<div class="col-sm main-col">
+				<h2>Co-founder</h2>
+				<p>Co-founded <a href="http://fisioti.me">FisioTi.me</a>, a startup that uses AI to automate online marketing for small businesses.<br>
+				Currently the product is in beta and undergoing active development
+				</p>
+			</div>
+			<div class="col-sm main-col">
+				<h2>Hackathon-goer</h2>
+				<p>
+HackUPC Fall 2017 - Bookity<br>
+OxfordHack - MediQ<br>
+HackUAB - FisioTime 0.1<br>
+Imagine Express 2018 - Inspire<br>
+uCode Zaragoza - Bootilicious<br>
+Copenhacks - Chandlerbot<br>
+				</p>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer class="row icons no-gutters">
+			<div class="col">
+				<a href="https://github.com/corollari"><i class="fa fa-github" title="Github"></i></a>
+			</div>
+			<div class="col">
+				<a href="https://linkedin.com/in/aacebron"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+			</div>
+			<div class="col">
+				<a href="mailto:me@albert.sh"><i class="fa fa-envelope" title="me@albert.sh"></i></a>
+			</div>
+			<div class="col">
+				<a href="resume.pdf"><i title="Resumé" class="fa fa-file-text"></i></a>
+			</div>
+		</footer>
+		</div>
+		</div>
+	<!-- Scripts -->
+	<script src="gameoflife.js"></script>
+	<script>
+		var interval;
+		function loaded(){
+			const cellSize=10;
+			var canvas = document.getElementById('background');
+			//var ctx=canvas.getContext("2d");
+			//var prerender = document.getElementById('prerender');
+			canvas.width=window.innerWidth;
+			//prerender.width=window.innerWidth;
+			canvas.height=window.innerHeight;
+			//prerender.height=window.innerHeight;
+			var cells = [];
+			var rand_num = Math.floor(Math.random()*100)+10;
+			for (var i=0; i < Math.ceil(canvas.height/cellSize); i++) {
+				cells[i] = [];
+				for (var j=0; j < Math.ceil(canvas.width/cellSize); j++) {
+					cells[i][j] = Math.floor(Math.random()*2);
 				}
-			</script>
-
+			}
+			var game = new GameOfLife({
+				canvas_id:    "background",
+				cell_width:   cellSize,
+				cell_height:  cellSize,
+				init_cells:   cells,
+				colourful:    true
+			});
+			/*function step(){
+				console.log(new Date().getSeconds());
+				game.step();
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				ctx.drawImage(prerender, 0, 0);
+			}*/
+			if(interval){
+				clearInterval(interval);
+			}
+			interval = setInterval(game.step, 100);
+			game.setTheInterval(interval);
+		}
+	</script>
 	</body>
 </html>
