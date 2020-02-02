@@ -203,20 +203,22 @@ h1, h2, p{
 	<script>
 		var interval;
 		function loaded(){
-			const cellSize=10;
+			const cellSize=30;
 			var canvas = document.getElementById('background');
-			//var ctx=canvas.getContext("2d");
-			//var prerender = document.getElementById('prerender');
 			canvas.width=window.innerWidth;
-			//prerender.width=window.innerWidth;
 			canvas.height=window.innerHeight;
-			//prerender.height=window.innerHeight;
 			var cells = [];
-			var rand_num = Math.floor(Math.random()*100)+10;
+			var glider = [
+				[0, 1, 0],
+				[0, 0, 1],
+				[1, 1, 1]
+			];
+			var centerY = Math.ceil((canvas.height/cellSize)/2)
+			var centerX = Math.ceil((canvas.width/cellSize)/2)
 			for (var i=0; i < Math.ceil(canvas.height/cellSize); i++) {
 				cells[i] = [];
 				for (var j=0; j < Math.ceil(canvas.width/cellSize); j++) {
-					cells[i][j] = Math.floor(Math.random()*2);
+					cells[i][j] = (i>=centerY-1 && i<=centerY+1 && j>=centerX-1 && j<=centerX+1 && glider[i-centerY+1][j-centerX+1])+0; //Sorcery!
 				}
 			}
 			var game = new GameOfLife({
@@ -224,14 +226,8 @@ h1, h2, p{
 				cell_width:   cellSize,
 				cell_height:  cellSize,
 				init_cells:   cells,
-				colourful:    true
+				colourful:    false
 			});
-			/*function step(){
-				console.log(new Date().getSeconds());
-				game.step();
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				ctx.drawImage(prerender, 0, 0);
-			}*/
 			if(interval){
 				clearInterval(interval);
 			}
